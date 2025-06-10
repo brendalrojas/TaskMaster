@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlinAndroidKsp)
+    alias(libs.plugins.hiltAndroid)
 }
 
 android {
@@ -58,17 +60,21 @@ dependencies {
     debugImplementation(libs.androidx.ui.test.manifest)
     implementation(libs.retrofit)
     implementation(libs.retrofit)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.navigation.runtime.ktx)
 
 
     // Hilt dependencies
     implementation(libs.hilt.android)
-   /* ksp(libs.symbol.processing.api)
-    ksp(libs.hilt.android.compiler)*/
     implementation(libs.androidx.hilt.common)
     implementation(libs.androidx.hilt.work)
     implementation(libs.androidx.hilt.navigation.compose)
     annotationProcessor(libs.room.compiler)
-    //ksp(libs.room.compiler)
+    ksp(libs.room.compiler)
+    ksp(libs.hilt.compiler)
     implementation(libs.room.android)
     annotationProcessor(libs.room.compiler)
+    implementation(libs.hilt.android)
+    implementation(libs.coil.compose)
+
 }
