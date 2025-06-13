@@ -44,5 +44,4 @@ fun SplashScreen(
             3000
         )
     }
-
 }

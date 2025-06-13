@@ -22,5 +22,4 @@ class HomeViewModel @Inject constructor() : ViewModel() {
             HomeUiEvent.ToogleDialog -> TODO()
         }
     }
-
 }
