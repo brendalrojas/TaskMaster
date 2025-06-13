@@ -27,13 +27,11 @@ fun HomeScreen(
     }
     //header
 
-
     //my tasks
 
     // completed tasks
 
     //floating button
-
 }
 
 /*
