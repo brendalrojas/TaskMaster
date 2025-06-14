@@ -19,7 +19,7 @@ class HomeViewModel @Inject constructor() : ViewModel() {
             HomeUiEvent.CloseTaskDialog -> TODO()
             is HomeUiEvent.CompletedTask -> TODO()
             is HomeUiEvent.OpenTaskDialog -> TODO()
-            HomeUiEvent.ToogleDialog -> TODO()
+            HomeUiEvent.ToggleDialog -> TODO()
         }
     }
 }

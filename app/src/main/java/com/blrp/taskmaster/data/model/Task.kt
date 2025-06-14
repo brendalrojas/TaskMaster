@@ -1,6 +1,6 @@
 package com.blrp.taskmaster.data.model
 
-data class Task (
+data class Task(
     val taskId: Long,
     val taskName: String,
     val taskDetails: String,
