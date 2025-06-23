@@ -24,7 +24,7 @@ fun Header() {
     Box(
         modifier = Modifier
             .fillMaxWidth(),
-        contentAlignment = Alignment.CenterStart
+        contentAlignment = Alignment.BottomStart
     ) {
         Column(
             modifier = Modifier
@@ -34,14 +34,14 @@ fun Header() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .background(Color(0xFFDAD5C1))
-                    .height(50.dp)
+                    .height(80.dp)
                     .padding(horizontal = 16.dp),
                 horizontalArrangement = Arrangement.End,
-                verticalAlignment = Alignment.CenterVertically
+                verticalAlignment = Alignment.Bottom
             ) {
                 AsyncImage(
                     modifier = Modifier
-                        .size(40.dp)
+                        .size(45.dp)
                         .padding(8.dp),
                     model = R.drawable.user,
                     contentDescription = "user",
@@ -52,13 +52,12 @@ fun Header() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .background(Color(0xFFFFFFFF))
-                    .height(30.dp)
-                    .padding(horizontal = 8.dp),
+                    .height(20.dp)
             ) {}
         }
         AsyncImage(
             modifier = Modifier
-                .size(60.dp)
+                .size(70.dp)
                 .padding(start = 16.dp),
             model = R.drawable.planner,
             contentDescription = "planner",

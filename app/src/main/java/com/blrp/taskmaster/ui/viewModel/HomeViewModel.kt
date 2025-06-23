@@ -16,10 +16,10 @@ class HomeViewModel @Inject constructor() : ViewModel() {
     fun homeUiEvent(event: HomeUiEvent) {
         when (event) {
             is HomeUiEvent.AddTask -> TODO()
-            HomeUiEvent.CloseTaskDialog -> TODO()
+            is HomeUiEvent.CloseTaskDialog -> TODO()
             is HomeUiEvent.CompletedTask -> TODO()
             is HomeUiEvent.OpenTaskDialog -> TODO()
-            HomeUiEvent.ToogleDialog -> TODO()
+            is HomeUiEvent.ToggleDialog -> TODO()
         }
     }
 }

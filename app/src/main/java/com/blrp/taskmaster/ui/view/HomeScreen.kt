@@ -1,14 +1,17 @@
 package com.blrp.taskmaster.ui.view
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
-import androidx.compose.material3.Text
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import com.blrp.taskmaster.ui.components.Header
+import com.blrp.taskmaster.ui.components.SubtitleSection
+import com.blrp.taskmaster.ui.components.TaskItem
 import com.blrp.taskmaster.ui.viewModel.HomeViewModel
 
 @Composable
@@ -16,27 +19,76 @@ fun HomeScreen(
     modifier: Modifier,
     homeViewModel: HomeViewModel,
 ) {
+    val scrollState = rememberScrollState()
+
     val homeUiState by homeViewModel.homeUiState.collectAsState()
 
+    val list = listOf(
+        "1", "2", "3",
+        "1", "2", "3",
+        "1", "2", "3",
+        "1", "2", "3",
+        "1", "2", "3",
+        "1", "2", "3",
+        "1", "2", "3",
+        "1", "2", "3",
+        "1", "2", "3",
+        "1", "2", "3",
+        "1", "2", "3",
+        "1", "2", "3",
+        "1", "2", "3",
+        "1", "2", "3",
+    )
+
+
     Column(
-        modifier = modifier.background(Color(0xFFFFFFFF))
+        modifier = modifier
+            .fillMaxSize()
+            .verticalScroll(scrollState),
     ) {
-        Header()
-        Text(text = "My tasks")
-        Text(text = "Completed tasks")
+        SubtitleSection("My tasks")
+        list.forEachIndexed { index, task ->
+            TaskItem(
+            )
+        }
     }
-    //header
 
-    //my tasks
-
-    // completed tasks
-
-    //floating button
 }
 
-/*
-@Preview
-@Composable
-fun HomeScreenPreview(){
-HomeScreen()
-}*/
+
+/*Scaffold(
+    modifier = modifier.fillMaxSize(),
+    containerColor = Color(0xFFFFFFFF),
+    topBar = { Header() },
+    floatingActionButton = {
+        FloatingActionButton(
+            onClick = { },
+            shape = CircleShape,
+        ) {
+            Icon(Icons.Filled.Add, "Small floating action button.")
+        }
+    },
+    content = { paddingValue ->
+        Column(
+            modifier = Modifier
+                .padding(paddingValue)
+                .fillMaxSize()
+                .verticalScroll(scrollState),
+        ) {
+            SubtitleSection("My tasks")
+            homeUiState.taskList.forEachIndexed { index, task ->
+                TaskItem(
+                    homeUiState.taskList[index],
+                    onTaskCompleted = { checked ->
+                        if (checked) {
+                            homeViewModel.homeUiEvent(event = HomeUiEvent.CompletedTask(index = index))
+                        }
+                    },
+                    onClick = {
+                        homeViewModel.homeUiEvent(event = HomeUiEvent.OpenTaskDialog(homeUiState.taskList[index]))
+                    })
+            }
+            SubtitleSection("My tasks")
+
+        }
+        }*/

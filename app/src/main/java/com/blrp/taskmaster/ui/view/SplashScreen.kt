@@ -25,7 +25,7 @@ fun SplashScreen(
     navController: NavController,
 ) {
     Column(
-        modifier = modifier
+        modifier = Modifier
             .fillMaxSize()
             .background(Color(0xFFDAD5C1)),
         horizontalAlignment = Alignment.CenterHorizontally,

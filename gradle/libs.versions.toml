@@ -42,7 +42,6 @@ retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = 
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltCompiler" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomVersion" }
 room-android = { module = "androidx.room:room-ktx", version.ref = "roomVersion" }
-androidx-hilt-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltWork" }
 androidx-hilt-common = { group = "androidx.hilt", name = "hilt-common", version.ref = "hiltCommon" }
 hilt-android = { group = "com.google.dagger", name = "hilt-android" , version.ref = "hiltVersion"}
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler" , version.ref = "hiltVersion"}
