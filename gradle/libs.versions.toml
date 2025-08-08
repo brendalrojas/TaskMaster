@@ -17,7 +17,7 @@ hiltWork = "1.2.0"
 roomVersion = "2.7.2"
 coil = "3.3.0"
 kspVersion = "2.1.21-2.0.1"
-hiltVersion = "2.51.1"
+hiltVersion = "2.57"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
