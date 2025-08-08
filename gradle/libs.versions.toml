@@ -15,7 +15,7 @@ hiltCompiler = "1.2.0"
 hiltCommon = "1.2.0"
 hiltWork = "1.2.0"
 roomVersion = "2.7.2"
-coil = "3.0.4"
+coil = "3.3.0"
 kspVersion = "2.0.0-1.0.23"
 hiltVersion = "2.51.1"
 
