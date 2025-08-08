@@ -16,7 +16,7 @@ hiltCommon = "1.2.0"
 hiltWork = "1.2.0"
 roomVersion = "2.7.2"
 coil = "3.3.0"
-kspVersion = "2.0.0-1.0.23"
+kspVersion = "2.1.21-2.0.1"
 hiltVersion = "2.51.1"
 
 [libraries]
